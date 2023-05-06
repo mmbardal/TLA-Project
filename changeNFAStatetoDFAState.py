@@ -99,7 +99,7 @@ def CreateNewNonInitialState(
         for s in newState:
             for item in FindLambdaTransitions(s):
                 e.append(item)
-        if (TemporaryData.CheckShouldThisStateBuiltOrNot(e)):
+        if (TemporaryData.CheckIsThisStateDiscoveredOrBuilt(e)):
             it = {}
             it["states"] = list(set(e))
             it["Transition"] = QueryInOriginalData.ReturnTransitionsForMultipleInputSymbolAndMultipleStates(
@@ -112,6 +112,6 @@ def CreateNewNonInitialState(
             for item in it["Transition"].keys():
                 if it["Transition"][item][0]== OriginalData.Trap:
                     continue
-                if(TemporaryData.CheckShouldThisStateBuiltOrNot(it["Transition"][item])):
+                if(TemporaryData.CheckIsThisStateDiscoveredOrBuilt(it["Transition"][item])):
                     TemporaryData.discoveredButNotCompletedStates.append(it["Transition"][item])
     ReadJSONFile.WriteToJSONFile()
