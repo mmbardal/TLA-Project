@@ -3,5 +3,4 @@ from CheckString import CheckString
 import OriginalData
 
 init()
-CheckString
-print(CheckString("abaa",-1,"A"))
+print(CheckString("b",-1,"A"))
