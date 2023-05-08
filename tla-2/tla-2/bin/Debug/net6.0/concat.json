@@ -1,0 +1,1 @@
+{"states":"{'q0','q1','q0x','q1x','q2x'}","input_symbols":"{'1','2','a','b'}","transitions":{"q0":{"1":"{'q0'}","2":"{'q1'}"},"q1":{"":"{'q0x'}"},"q0x":{"b":"{'q1x'}"},"q1x":{"a":"{'q2x'}"},"q2x":{}},"initial_state":"q0","final_states":"{'q2x'}"}
